@@ -164,3 +164,226 @@ export const vue = createSkillFactory({
   iconColor: '#4FC08D',
   url: 'https://vuejs.org/',
 });
+
+export const python = createSkillFactory({
+  name: 'Python',
+  icon: 'simple-icons:python',
+  iconColor: '#3776AB',
+  url: 'https://www.python.org/',
+});
+
+export const rust = createSkillFactory({
+  name: 'Rust',
+  icon: 'simple-icons:rust',
+  iconColor: '#000000',
+  url: 'https://www.rust-lang.org/',
+});
+
+export const django = createSkillFactory({
+  name: 'Django',
+  icon: 'simple-icons:django',
+  iconColor: '#092E20',
+  url: 'https://www.djangoproject.com/',
+});
+
+export const fastApi = createSkillFactory({
+  name: 'FastAPI',
+  icon: 'simple-icons:fastapi',
+  iconColor: '#009688',
+  url: 'https://fastapi.tiangolo.com/',
+});
+
+export const flask = createSkillFactory({
+  name: 'Flask',
+  icon: 'simple-icons:flask',
+  iconColor: '#000000',
+  url: 'https://flask.palletsprojects.com/',
+});
+
+export const langChain = createSkillFactory({
+  name: 'LangChain',
+  icon: 'simple-icons:langchain',
+  iconColor: '#1C3C3C',
+  url: 'https://www.langchain.com/',
+});
+
+export const llamaIndex = createSkillFactory({
+  name: 'LlamaIndex',
+  icon: 'fa6-solid:layer-group',
+  iconColor: '#000000',
+  url: 'https://www.llamaindex.ai/',
+});
+
+export const openAi = createSkillFactory({
+  name: 'OpenAI',
+  icon: 'simple-icons:openai',
+  iconColor: '#412991',
+  url: 'https://openai.com/',
+});
+
+export const huggingFace = createSkillFactory({
+  name: 'Hugging Face',
+  icon: 'simple-icons:huggingface',
+  iconColor: '#FFD21E',
+  url: 'https://huggingface.co/',
+});
+
+export const pydantic = createSkillFactory({
+  name: 'Pydantic',
+  icon: 'simple-icons:pydantic',
+  iconColor: '#E92063',
+  url: 'https://docs.pydantic.dev/',
+});
+
+export const docker = createSkillFactory({
+  name: 'Docker',
+  icon: 'simple-icons:docker',
+  iconColor: '#2496ED',
+  url: 'https://www.docker.com/',
+});
+
+export const kubernetes = createSkillFactory({
+  name: 'Kubernetes',
+  icon: 'simple-icons:kubernetes',
+  iconColor: '#326CE5',
+  url: 'https://kubernetes.io/',
+});
+
+export const redis = createSkillFactory({
+  name: 'Redis',
+  icon: 'simple-icons:redis',
+  iconColor: '#FF4438',
+  url: 'https://redis.io/',
+});
+
+export const git = createSkillFactory({
+  name: 'Git',
+  icon: 'simple-icons:git',
+  iconColor: '#F05032',
+  url: 'https://git-scm.com/',
+});
+
+export const djangoRestFramework = createSkillFactory({
+  name: 'Django REST Framework',
+  icon: 'simple-icons:django',
+  iconColor: '#092E20',
+  url: 'https://www.django-rest-framework.org/',
+});
+
+export const djangoNinja = createSkillFactory({
+  name: 'Django Ninja',
+  icon: 'simple-icons:django',
+  iconColor: '#092E20',
+  url: 'https://django-ninja.dev/',
+});
+
+export const rabbitMq = createSkillFactory({
+  name: 'RabbitMQ',
+  icon: 'simple-icons:rabbitmq',
+  iconColor: '#FF6600',
+  url: 'https://www.rabbitmq.com/',
+});
+
+export const mqtt = createSkillFactory({
+  name: 'MQTT',
+  icon: 'simple-icons:mqtt',
+  iconColor: '#660066',
+  url: 'https://mqtt.org/',
+});
+
+export const qt = createSkillFactory({
+  name: 'Qt',
+  icon: 'simple-icons:qt',
+  iconColor: '#41CD52',
+  url: 'https://www.qt.io/',
+});
+
+export const pydanticAi = createSkillFactory({
+  name: 'Pydantic AI',
+  icon: 'simple-icons:pydantic',
+  iconColor: '#E92063',
+  url: 'https://ai.pydantic.dev/',
+});
+
+export const pytorch = createSkillFactory({
+  name: 'PyTorch',
+  icon: 'simple-icons:pytorch',
+  iconColor: '#EE4C2C',
+  url: 'https://pytorch.org/',
+});
+
+export const tensorflow = createSkillFactory({
+  name: 'TensorFlow',
+  icon: 'simple-icons:tensorflow',
+  iconColor: '#FF6F00',
+  url: 'https://www.tensorflow.org/',
+});
+
+export const celery = createSkillFactory({
+  name: 'Celery',
+  icon: 'simple-icons:celery',
+  iconColor: '#37814A',
+  url: 'https://docs.celeryq.dev/',
+});
+
+export const linux = createSkillFactory({
+  name: 'Linux',
+  icon: 'simple-icons:linux',
+  iconColor: '#FCC624',
+  url: 'https://www.linux.org/',
+});
+
+export const opencv = createSkillFactory({
+  name: 'OpenCV',
+  icon: 'simple-icons:opencv',
+  iconColor: '#5C3EE8',
+  url: 'https://opencv.org/',
+});
+
+export const bluetooth = createSkillFactory({
+  name: 'Bluetooth / BLE',
+  icon: 'ri:bluetooth-fill',
+  iconColor: '#0082FC',
+  url: 'https://www.bluetooth.com/',
+});
+
+export const wifi = createSkillFactory({
+  name: 'Wi-Fi',
+  icon: 'ri:wifi-fill',
+  iconColor: '#1E88E5',
+});
+
+export const timescaleDb = createSkillFactory({
+  name: 'TimescaleDB',
+  icon: 'simple-icons:timescale',
+  iconColor: '#FDB515',
+  url: 'https://www.timescale.com/',
+});
+
+export const yolo = createSkillFactory({
+  name: 'YOLO',
+  icon: 'fa6-solid:crosshairs',
+  iconColor: '#00FFFF',
+  url: 'https://docs.ultralytics.com/',
+});
+
+export const kaggle = createSkillFactory({
+  name: 'Kaggle',
+  icon: 'fa6-brands:kaggle',
+  iconColor: '#20BEFF',
+  url: 'https://www.kaggle.com/',
+});
+
+export const jupyter = createSkillFactory({
+  name: 'Jupyter',
+  icon: 'simple-icons:jupyter',
+  iconColor: '#F37626',
+  url: 'https://jupyter.org/',
+});
+
+export const gpu = createSkillFactory({
+  name: 'GPU (CUDA)',
+  icon: 'simple-icons:nvidia',
+  iconColor: '#76B900',
+  url: 'https://developer.nvidia.com/cuda-toolkit',
+});
