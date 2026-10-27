@@ -1,79 +1,150 @@
 import type { DataTransformer } from '../_internals/transformers';
-import { sortSkills, updateJob, updateMainSection, updateMeta } from '../_internals/transformers';
-import { django, djangoNinja, mqtt, opencv, postgreSql, python, rust, timescaleDb } from '../helpers/skills';
+import {
+  addSkillSet,
+  hideSkills,
+  sortSkills,
+  updateJob,
+  updateMainSection,
+  updateMeta,
+} from '../_internals/transformers';
+import {
+  celery,
+  django,
+  djangoNinja,
+  djangoRestFramework,
+  elkStack,
+  githubActions,
+  gitlabCi,
+  grafana,
+  keycloak,
+  locust,
+  mqtt,
+  opencv,
+  openApi,
+  postgreSql,
+  prometheus,
+  python,
+  rabbitMq,
+  redis,
+  timescaleDb,
+} from '../helpers/skills';
 
 /**
- * Resume variant targeting senior backend engineering and team lead roles.
+ * Resume variant targeting backend tech lead roles.
  */
 const backendLeadVariant: DataTransformer[] = [
   updateMeta({
-    title: 'Arshia Soori - Senior Backend Engineer & Team Lead',
+    title: 'Arshia Soori - Backend Tech Lead',
     description:
-      'Senior Python backend engineer and team lead with 5+ years leading engineering teams, including two CTO roles.',
+      'Hands-on backend tech lead (Python, Django, distributed systems) with 5 years of technical leadership and 4+ years owning product architecture end to end.',
   }),
   updateMainSection({
-    role: 'Senior Backend Engineer & Team Lead',
+    role: 'Backend Tech Lead | Python, Django, Distributed Systems',
+    details: [
+      { label: 'Phone', value: '+98 913 563 5155', url: 'tel:+98 913 563 5155' },
+      { label: 'Email', value: 'arshiasoori2000@gmail.com', url: 'mailto:arshiasoori2000@gmail.com' },
+      { label: 'From', value: 'Isfahan, Iran' },
+      { label: 'Military service', value: 'Exempt (guardianship exemption)' },
+    ],
+    pdfDetails: [
+      { label: 'Phone', value: '+98 913 563 5155' },
+      { label: 'Email', value: 'arshiasoori2000@gmail.com' },
+      { label: 'LinkedIn', value: '/in/arshia-soori', url: 'https://linkedin.com/in/arshia-soori' },
+      { label: 'GitHub', value: '/CaptainArshia', url: 'https://github.com/CaptainArshia' },
+      { label: 'Website', value: 'arshiasoori.com', url: '/', fullRow: true },
+      { label: 'Military service', value: 'Exempt (guardianship exemption)', fullRow: true },
+    ],
     description:
-      '**Senior Python backend engineer and technical leader** with 5+ years leading engineering teams, including two CTO roles. Owns systems end to end — Django and FastAPI services, PostgreSQL and TimescaleDB data stores, message queues and real-time IoT pipelines, and containerized deployments — along with the team behind them: hiring, mentoring, and setting technical direction. Looking for a role where I can lead teams and build reliable, scalable systems.',
-    tags: [{ name: 'Open for new adventures' }, { name: 'Team leadership' }, { name: 'Backend architecture' }],
+      '**Hands-on backend tech lead** with 5 years of technical leadership and 4+ years owning product architecture end to end. I design and build Django/DRF and Django Ninja services, integration-heavy microservice platforms, and event-driven systems (Celery, RabbitMQ, Redis, MQTT) that handle sensitive personal data in production. I set the engineering standards (code review, branching and release, testing, API documentation), lead and hire engineers, and turn business and partner requirements into reliable, observable systems.',
+    tags: [{ name: 'Open for new adventures' }, { name: 'Hands-on tech lead' }, { name: 'Distributed systems' }],
     action: {
       label: 'Download CV',
       url: '/cv-backend.pdf',
-      downloadedFileName: 'CV-Arshia_Soori-Backend_Team_Lead.pdf',
+      downloadedFileName: 'CV-Arshia_Soori-Backend_Tech_Lead.pdf',
     },
   }),
+  hideSkills('I already know', ['Hugging Face', 'TensorFlow']),
   sortSkills('I already know', [
     'Python',
     'Django',
     'Django REST Framework',
     'Django Ninja',
     'FastAPI',
+    'Pydantic',
     'PostgreSQL',
-    'Redis',
-    'Celery',
     'RabbitMQ',
+    'Celery',
+    'Redis',
     'MQTT',
     'Docker',
     'Kubernetes',
     'Linux',
     'Git',
-    'Pydantic',
   ]),
+  addSkillSet(
+    {
+      title: 'I also work with',
+      skills: [openApi(), keycloak(), locust(), gitlabCi(), githubActions(), elkStack(), prometheus(), grafana()],
+    },
+    'I speak'
+  ),
   updateJob('DelBand', {
+    role: 'CTO and Hands-on Tech Lead',
     description: `
-      Iran's first smart health monitoring service, and the first to hold a Med 3.0 license. Owned and operated by Ayandeh Pardaz, backed by MCI's investment fund Harekat Aval, with Hamrahe Aval (MCI) as investor and business partner.
+      Iran's first smart health monitoring service and the first holder of a Med 3.0 license, built by Ayandeh Pardaz, a technology company backed by Hamrahe Aval (MCI) and its investment fund Harekat Aval. Wearable rings and watches stream sensor data (ECG, HRV, sleep, falls, blood oxygen) that is analyzed and shown in the app, with emergency alerts to family members and caregivers.
 
-      - Leading the engineering team and owning technical strategy for the company's health monitoring platform.
-      - Hiring, mentoring, and managing engineers across backend, AI, and infrastructure.
-      - Directing product and architecture decisions, including the backend that ingests wearable sensor data and serves health insights to the app.
-      - Leading the medical algorithms team that turns sensor data into health insights using ML and AI.
+      - Lead a team of 4 engineers and own architecture, technical strategy, and delivery.
+      - Started the backend as a Django/DRF monolith, then led its refactor into microservices built on Django Ninja.
+      - Designed integrations with MCI APN and 5G SIM cards for emergency calls, Bale, Kavenegar, and SMS.ir for OTP and messaging, and MCI Evano Pay.
+      - Built fault-tolerant external calls with timeouts, retries, circuit breakers, and idempotent processing, so emergency alarms are neither lost nor sent twice.
+      - Run alarms, notifications, OTP, email, and background health analysis as asynchronous jobs on Celery, RabbitMQ, and Redis.
+      - Secured sensitive health data with Keycloak-based authentication, role-based access control, and encryption.
+      - Designed PostgreSQL and TimescaleDB schemas for high-volume sensor time series and optimized slow queries.
+
+      Engineering standards across DelBand and IndoorA:
+
+      - Defined code review rules, branching and release process, testing requirements, and OpenAPI documentation standards.
+      - Set up CI/CD with GitLab CI and GitHub Actions, containerized services with Docker, and deployed to Kubernetes with the DevOps engineer.
+      - Built observability with ELK for logging and Prometheus and Grafana for metrics, dashboards, and alerting.
+      - Ran load and performance tests with Locust before releases to plan capacity.
     `,
     tagsList: {
       title: 'Technologies',
-      tags: [python(), rust(), django(), djangoNinja(), postgreSql(), timescaleDb()],
+      tags: [
+        python(),
+        django(),
+        djangoRestFramework(),
+        djangoNinja(),
+        celery(),
+        rabbitMq(),
+        redis(),
+        postgreSql(),
+        timescaleDb(),
+        keycloak(),
+      ],
     },
   }),
   updateJob('IndoorA', {
+    role: 'CTO and Hands-on Tech Lead',
     description: `
-      The first indoor positioning and navigation system in the Middle East, owned and operated by Ayandeh Pardaz.
+      The first indoor positioning and navigation system in the Middle East, built by Ayandeh Pardaz and serving asset tracking, workforce safety, and visitor wayfinding for enterprise and public venues.
 
-      - Led the engineering team from early product to a certified knowledge-based positioning and navigation platform.
-      - Owned technical strategy, architecture, and hiring for the engineering organization.
-      - Architected the backend and real-time pipeline ingesting BLE, Wi-Fi, and UWB data from beacons and gateways over MQTT into PostgreSQL and TimescaleDB.
-      - Delivered one platform powering three business models (asset and workforce tracking, life safety, mall and exhibition wayfinding) for MCI, Radin, Mobarakeh Steel Company, Tehran International Exhibition Center, and Iran Mall.
+      - Led a team of 6 engineers from early product to a certified knowledge-based platform, and hired 3 engineers across both products.
+      - Designed a fully microservice architecture with DRF and ADRF (async DRF) services, plus a dedicated Django Ninja edition (IndoorA-Hall) for Tehran International Exhibition Center.
+      - Delivered and integrated the platform for MCI, Radin, Tehran International Exhibition Center, Iran Mall, and Mobarakeh Steel Company, translating each client's business requirements into technical solutions.
+      - Built event-driven location processing over MQTT and RabbitMQ, with Celery workers for background position calculation and safety alerts, and Redis for caching and rate limiting.
+      - Versioned public APIs (v1, v2) to keep mobile apps and partner integrations backward compatible.
+      - Secured APIs with JWT authentication and access control.
     `,
     tagsList: {
       title: 'Technologies',
-      tags: [python(), rust(), django(), djangoNinja(), postgreSql(), timescaleDb(), mqtt()],
+      tags: [python(), djangoRestFramework(), djangoNinja(), mqtt(), rabbitMq(), celery(), redis(), postgreSql()],
     },
   }),
   updateJob('Advanced Aerospace Structures Laboratory, K. N. Toosi University of Technology', {
     description: `
-      Led the development of an intelligent traffic and movement management system for entry/exit management, automated door control, guest management, and reporting.
-
-      - Led a team of engineers, setting technical direction and reviewing implementation.
-      - Coordinated with university researchers and stakeholders on project scope and delivery.
-      - Delivered operator dashboards with detailed reports on top of a real-time computer vision pipeline.
+      - Led a team of engineers building an intelligent entry/exit management system: real-time vehicle and person detection, automated door control, guest management, and an operator reporting dashboard.
+      - Coordinated scope and delivery with university researchers and stakeholders.
     `,
     tagsList: {
       title: 'Technologies',

@@ -387,3 +387,59 @@ export const gpu = createSkillFactory({
   iconColor: '#76B900',
   url: 'https://developer.nvidia.com/cuda-toolkit',
 });
+
+export const keycloak = createSkillFactory({
+  name: 'Keycloak',
+  icon: 'fa6-solid:key',
+  iconColor: '#4D4D4D',
+  url: 'https://www.keycloak.org/',
+});
+
+export const gitlabCi = createSkillFactory({
+  name: 'GitLab CI',
+  icon: 'simple-icons:gitlab',
+  iconColor: '#FC6D26',
+  url: 'https://docs.gitlab.com/ee/ci/',
+});
+
+export const githubActions = createSkillFactory({
+  name: 'GitHub Actions',
+  icon: 'simple-icons:githubactions',
+  iconColor: '#2088FF',
+  url: 'https://github.com/features/actions',
+});
+
+export const elkStack = createSkillFactory({
+  name: 'ELK Stack',
+  icon: 'simple-icons:elasticstack',
+  iconColor: '#005571',
+  url: 'https://www.elastic.co/elastic-stack',
+});
+
+export const prometheus = createSkillFactory({
+  name: 'Prometheus',
+  icon: 'simple-icons:prometheus',
+  iconColor: '#E6522C',
+  url: 'https://prometheus.io/',
+});
+
+export const grafana = createSkillFactory({
+  name: 'Grafana',
+  icon: 'simple-icons:grafana',
+  iconColor: '#F46800',
+  url: 'https://grafana.com/',
+});
+
+export const locust = createSkillFactory({
+  name: 'Locust',
+  icon: 'fa6-solid:gauge-high',
+  iconColor: '#2E7D32',
+  url: 'https://locust.io/',
+});
+
+export const openApi = createSkillFactory({
+  name: 'OpenAPI / Swagger',
+  icon: 'simple-icons:swagger',
+  iconColor: '#85EA2D',
+  url: 'https://swagger.io/',
+});

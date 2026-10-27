@@ -21,7 +21,7 @@ export interface Variant {
 
 export const variants = {
   ai: { label: 'AI Engineer', webPath: '/', transformers: aiVariant },
-  backendLead: { label: 'Backend / Team Lead', webPath: '/backend', transformers: backendLeadVariant },
+  backendLead: { label: 'Backend Tech Lead', webPath: '/backend', transformers: backendLeadVariant },
 } as const satisfies Record<string, Variant>;
 
 export type VariantKey = keyof typeof variants;

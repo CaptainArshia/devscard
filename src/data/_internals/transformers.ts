@@ -123,3 +123,12 @@ export const sortSkills =
       if (skillSet.title === skillSetTitle) skillSet.skills.sort((a, b) => rank(a.name) - rank(b.name));
     });
   };
+
+export const addSkillSet =
+  (skillSet: DraftData['sections']['skills']['skillSets'][number], before?: SkillSetTitle): DataTransformer =>
+  (draft) => {
+    const skillSets = draft.sections.skills.skillSets;
+    const index = skillSets.findIndex((draftSkillSet) => draftSkillSet.title === before);
+
+    skillSets.splice(index === -1 ? skillSets.length : index, 0, skillSet);
+  };
