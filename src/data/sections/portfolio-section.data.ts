@@ -67,7 +67,7 @@ const portfolioSectionData = {
       image: import('@/assets/IndoorA.png'),
       dates: [new Date('2022-09'), new Date('2026-02')],
       details: [
-        { label: 'My role', value: 'CTO' },
+        { label: 'My role', value: 'CTO and AI Tech Lead' },
         { label: 'Company', value: 'Ayandeh Pardaz' },
         { label: 'Category', value: ['Indoor positioning', 'Navigation'] },
         { label: 'Recognition', value: 'Member of Iran\'s Knowledge-Based Companies' },

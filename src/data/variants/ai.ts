@@ -1,6 +1,7 @@
 import type { DataTransformer } from '../_internals/transformers';
 import { sortSkills, updateJob, updateMainSection, updateMeta } from '../_internals/transformers';
 import {
+  bluetooth,
   gpu,
   huggingFace,
   langChain,
@@ -10,6 +11,7 @@ import {
   python,
   pytorch,
   tensorflow,
+  wifi,
   yolo,
 } from '../helpers/skills';
 
@@ -72,7 +74,7 @@ const aiVariant: DataTransformer[] = [
     `,
     tagsList: {
       title: 'Technologies',
-      tags: [python(), pytorch(), tensorflow(), huggingFace(), gpu()],
+      tags: [python(), pytorch(), tensorflow(), huggingFace(), gpu(), bluetooth(), wifi()],
     },
   }),
   updateJob('Advanced Aerospace Structures Laboratory, K. N. Toosi University of Technology', {
@@ -81,7 +83,7 @@ const aiVariant: DataTransformer[] = [
 
       - Led development of real-time CNN-based (YOLO) detection and identification of vehicles and people.
       - Used language models to interpret activity and generate human-readable summaries and reports.
-      - Led a team of engineers, setting technical direction and reviewing implementation.
+      - Led a team of 7 engineers, setting technical direction and reviewing implementation.
     `,
     tagsList: {
       title: 'Technologies',
