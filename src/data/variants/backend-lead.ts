@@ -15,7 +15,9 @@ import {
   elkStack,
   githubActions,
   gitlabCi,
+  gpu,
   grafana,
+  huggingFace,
   keycloak,
   locust,
   mqtt,
@@ -24,8 +26,10 @@ import {
   postgreSql,
   prometheus,
   python,
+  pytorch,
   rabbitMq,
   redis,
+  tensorflow,
   timescaleDb,
 } from '../helpers/skills';
 
@@ -125,11 +129,12 @@ const backendLeadVariant: DataTransformer[] = [
     },
   }),
   updateJob('IndoorA', {
-    role: 'CTO and Hands-on Tech Lead',
+    role: 'CTO and AI Tech Lead',
     description: `
       The first indoor positioning and navigation system in the Middle East, built by Ayandeh Pardaz and serving asset tracking, workforce safety, and visitor wayfinding for enterprise and public venues.
 
       - Led a team of 6 engineers from early product to a certified knowledge-based platform, and hired 3 engineers across both products.
+      - As AI tech lead, led development of the positioning engine fusing BLE, Wi-Fi, and UWB signals with KNN, neural networks, CNNs, LSTMs, Kalman filters, and particle filters.
       - Designed a fully microservice architecture with DRF and ADRF (async DRF) services, plus a dedicated Django Ninja edition (IndoorA-Hall) for Tehran International Exhibition Center.
       - Delivered and integrated the platform for MCI, Radin, Tehran International Exhibition Center, Iran Mall, and Mobarakeh Steel Company, translating each client's business requirements into technical solutions.
       - Built event-driven location processing over MQTT and RabbitMQ, with Celery workers for background position calculation and safety alerts, and Redis for caching and rate limiting.
@@ -138,12 +143,25 @@ const backendLeadVariant: DataTransformer[] = [
     `,
     tagsList: {
       title: 'Technologies',
-      tags: [python(), djangoRestFramework(), djangoNinja(), mqtt(), rabbitMq(), celery(), redis(), postgreSql()],
+      tags: [
+        python(),
+        djangoRestFramework(),
+        djangoNinja(),
+        mqtt(),
+        rabbitMq(),
+        celery(),
+        redis(),
+        postgreSql(),
+        pytorch(),
+        tensorflow(),
+        huggingFace(),
+        gpu(),
+      ],
     },
   }),
   updateJob('Advanced Aerospace Structures Laboratory, K. N. Toosi University of Technology', {
     description: `
-      - Led a team of engineers building an intelligent entry/exit management system: real-time vehicle and person detection, automated door control, guest management, and an operator reporting dashboard.
+      - Led a team of 7 engineers building an intelligent entry/exit management system: real-time vehicle and person detection, automated door control, guest management, and an operator reporting dashboard.
       - Coordinated scope and delivery with university researchers and stakeholders.
     `,
     tagsList: {

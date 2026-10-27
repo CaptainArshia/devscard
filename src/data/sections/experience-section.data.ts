@@ -1,7 +1,21 @@
 import type { ExperienceSection } from '@/types/sections/experience-section.types';
 import type { ReadonlyDeep } from 'type-fest';
 import { website } from '../helpers/links';
-import { bluetooth, django, gpu, langChain, llamaIndex, opencv, pydanticAi, python, wifi, yolo } from '../helpers/skills';
+import {
+  bluetooth,
+  django,
+  gpu,
+  huggingFace,
+  langChain,
+  llamaIndex,
+  opencv,
+  pydanticAi,
+  python,
+  pytorch,
+  tensorflow,
+  wifi,
+  yolo,
+} from '../helpers/skills';
 
 const experienceSectionData = {
   config: {
@@ -31,7 +45,7 @@ const experienceSectionData = {
       links: [website({ url: 'https://delbandcare.com/' })],
     },
     {
-      role: 'CTO',
+      role: 'CTO and AI Tech Lead',
       company: 'IndoorA',
       image: import('@/assets/IndoorA.png'),
       dates: [new Date('2022-09'), new Date('2026-02')],
@@ -44,7 +58,7 @@ const experienceSectionData = {
       `,
       tagsList: {
         title: 'Technologies',
-        tags: [python(), django(), bluetooth(), wifi()],
+        tags: [python(), django(), bluetooth(), wifi(), pytorch(), tensorflow(), huggingFace(), gpu()],
       },
       links: [website({ url: 'https://indoora.net/' })],
     },
@@ -56,7 +70,7 @@ const experienceSectionData = {
       description: `
         Led the development of an intelligent traffic and movement management system combining image processing, CNNs, and language models for entry/exit management, automated door control, guest management, and reporting.
 
-        - Led a team of engineers, setting technical direction and reviewing implementation.
+        - Led a team of 7 engineers, setting technical direction and reviewing implementation.
         - Coordinated with university researchers and stakeholders on project scope and delivery.
       `,
       tagsList: {
