@@ -55,7 +55,12 @@ const backendLeadVariant: DataTransformer[] = [
       { label: 'Email', value: 'arshiasoori2000@gmail.com' },
       { label: 'LinkedIn', value: '/in/arshia-soori', url: 'https://linkedin.com/in/arshia-soori' },
       { label: 'GitHub', value: '/CaptainArshia', url: 'https://github.com/CaptainArshia' },
-      { label: 'Website', value: 'arshiasoori.com', url: '/', fullRow: true },
+      {
+        label: 'Website',
+        value: 'https://arshiasoori.vercel.app/backend',
+        url: 'https://arshiasoori.vercel.app/backend',
+        fullRow: true,
+      },
       { label: 'Military service', value: 'Exempt (guardianship exemption)', fullRow: true },
     ],
     description:
